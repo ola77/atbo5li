@@ -48,20 +48,19 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+
   assets:
-    - images/cheif hassan.jpg
-    - images/cheif logo.png
-    - images/diet food.png
-    - images/logo.png
-    - images/Natural food.png
+    - images/cheif_hassan.jpg
+    - images/cheif_logo.png
+    - images/diet_food.png
+    - images/natural_food.png
     - images/pizza.jpg
     - images/vegetarian.jpg
-
 
   fonts:
     - family: 'Cairo'
       fonts:
-        - asset: assets/fonts/Cairo-Regular.ttf
+        - asset: fonts/cairo/Cairo-Regular.ttf
 
 
 
