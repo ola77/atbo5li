@@ -2,10 +2,10 @@ import 'package:atbo5li/screens/cooker_login.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(Atbo5li());
 }
 
-class MyApp extends StatelessWidget {
+class Atbo5li extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

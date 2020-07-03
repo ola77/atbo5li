@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CustomFormField extends StatelessWidget {
-  CustomFormField({this.hintText});
+  CustomFormField({this.hintText, this.suffixIcon});
 
   final String hintText;
+  final Icon suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -14,8 +15,10 @@ class CustomFormField extends StatelessWidget {
         child: TextFormField(
           decoration: InputDecoration(
             hintText: hintText,
+            suffixIcon: suffixIcon,
             hintStyle: TextStyle(
-              color: Colors.grey,
+              fontFamily: 'cairo',
+              color: Color(0xFF744836),
               fontSize: 16.0,
             ),
             enabledBorder: OutlineInputBorder(

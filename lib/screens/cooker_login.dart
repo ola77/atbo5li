@@ -1,4 +1,5 @@
 import 'package:atbo5li/widgets/custom_formfield.dart';
+import 'package:atbo5li/widgets/gradient_button.dart';
 import 'package:flutter/material.dart';
 
 class CookerLogin extends StatelessWidget {
@@ -14,7 +15,31 @@ class CookerLogin extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Positioned(
-          bottom: 60,
+          top: 90,
+          left: 100,
+          child: Container(
+            padding: EdgeInsets.only(right: 12),
+            alignment: Alignment.center,
+            child: Text(
+              'أطبخلي',
+              style: TextStyle(
+                fontSize: 22.0,
+                color: Colors.white,
+                fontFamily: 'cairo',
+              ),
+            ),
+            width: 200,
+            height: 200,
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                image: AssetImage('images/cheif_logo.png'),
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+        ),
+        Positioned(
+          bottom: 40,
           child: Container(
             padding: EdgeInsets.only(top: 20),
             width: MediaQuery.of(context).size.width,
@@ -29,6 +54,7 @@ class CookerLogin extends StatelessWidget {
                   'يرجى تسجيل الدخول اولا',
                   style: TextStyle(
                     fontSize: 22.0,
+                    fontFamily: 'cairo',
                     color: Color(0xFFF38256),
                   ),
                 ),
@@ -37,9 +63,17 @@ class CookerLogin extends StatelessWidget {
                     children: <Widget>[
                       CustomFormField(
                         hintText: 'البريد الإلكتروني',
+                        suffixIcon: Icon(
+                          Icons.mail_outline,
+                          color: Color(0xFF744836),
+                        ),
                       ),
                       CustomFormField(
                         hintText: 'كلمة المرور',
+                        suffixIcon: Icon(
+                          Icons.lock_outline,
+                          color: Color(0xFF744836),
+                        ),
                       ),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.end,
@@ -48,11 +82,12 @@ class CookerLogin extends StatelessWidget {
                             'نسيت كلمة المرور ؟',
                             style: TextStyle(
                               fontSize: 22.0,
+                              fontFamily: 'cairo',
                               color: Color(0xFFF38256),
                             ),
                           ),
                           SizedBox(
-                            width: 10,
+                            width: 18.0,
                           ),
                         ],
                       ),
@@ -62,27 +97,13 @@ class CookerLogin extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
-                  height: 60.0,
-                  width: MediaQuery.of(context).size.width * 0.92,
-                  child: RaisedButton(
-                    child: Text(
-                      'تسجيل الدخول',
-                      style: TextStyle(fontSize: 22.0),
-                    ),
-                    onPressed: () {},
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(5),
-                    ),
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
+                GradientButton(),
+                SizedBox(height: 10),
                 Text(
                   'تسجيل حساب جديد',
                   style: TextStyle(
                     fontSize: 22.0,
+                    fontFamily: 'cairo',
                     color: Color(0xFFF38256),
                   ),
                 ),
