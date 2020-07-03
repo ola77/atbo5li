@@ -48,6 +48,22 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - images/cheif hassan.jpg
+    - images/cheif logo.png
+    - images/diet food.png
+    - images/logo.png
+    - images/Natural food.png
+    - images/pizza.jpg
+    - images/vegetarian.jpg
+
+
+  fonts:
+    - family: 'Cairo'
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
+
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
