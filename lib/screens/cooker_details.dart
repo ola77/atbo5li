@@ -1,5 +1,6 @@
 import 'package:atbo5li/widgets/custom_appbar.dart';
 import 'package:atbo5li/widgets/meal_card.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
@@ -23,6 +24,7 @@ class CookerDetails extends StatelessWidget {
         Column(
           children: <Widget>[
             Stack(
+              alignment: Alignment(0.0, -0.8),
               children: <Widget>[
                 Container(
                   padding: EdgeInsets.only(top: 30.0),
@@ -95,7 +97,8 @@ class CookerDetails extends StatelessWidget {
                     ],
                   ),
                 ),
-                Positioned(
+                Align(
+                  alignment: Alignment.center,
                   child: ClipOval(
                     child: Image.asset(
                       'images/cheif_hassan.jpg',
@@ -104,8 +107,6 @@ class CookerDetails extends StatelessWidget {
                       fit: BoxFit.cover,
                     ),
                   ),
-                  left: 123.0,
-                  top: 20.0,
                 ),
               ],
             ),
