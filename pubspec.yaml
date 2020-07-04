@@ -21,6 +21,8 @@ environment:
   sdk: ">=2.7.0 <3.0.0"
 
 dependencies:
+  flutter_rating_bar: ^3.0.1+1
+  smooth_star_rating: ^1.1.1
   flutter:
     sdk: flutter
 
@@ -51,11 +53,13 @@ flutter:
 
   assets:
     - images/cheif_hassan.jpg
+    - images/menu.png
     - images/cheif_logo.png
     - images/diet_food.png
     - images/natural_food.png
     - images/pizza.jpg
     - images/vegetarian.jpg
+    - images/logo.png
 
   fonts:
     - family: 'Cairo'
