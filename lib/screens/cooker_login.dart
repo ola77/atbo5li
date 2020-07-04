@@ -3,6 +3,7 @@ import 'package:atbo5li/widgets/gradient_button.dart';
 import 'package:flutter/material.dart';
 
 class CookerLogin extends StatelessWidget {
+  static const String id = "CookerLogIn_Screen";
   @override
   Widget build(BuildContext context) {
     return Scaffold(
