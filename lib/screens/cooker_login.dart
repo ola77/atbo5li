@@ -7,7 +7,7 @@ class CookerLogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFF38256),
+      backgroundColor: Color(0xffF48356),
       body: buildContent(context),
     );
   }
@@ -56,7 +56,7 @@ class CookerLogin extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 22.0,
                     fontFamily: 'cairo',
-                    color: Color(0xFFF38256),
+                    color: Color(0xffF48356),
                   ),
                 ),
                 Form(
@@ -84,7 +84,7 @@ class CookerLogin extends StatelessWidget {
                             style: TextStyle(
                               fontSize: 22.0,
                               fontFamily: 'cairo',
-                              color: Color(0xFFF38256),
+                              color: Color(0xffF48356),
                             ),
                           ),
                           SizedBox(
@@ -105,7 +105,7 @@ class CookerLogin extends StatelessWidget {
                   style: TextStyle(
                     fontSize: 22.0,
                     fontFamily: 'cairo',
-                    color: Color(0xFFF38256),
+                    color: Color(0xffF48356),
                   ),
                 ),
               ],
