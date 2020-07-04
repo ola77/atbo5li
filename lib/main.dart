@@ -1,4 +1,4 @@
-import 'package:atbo5li/screens/cooker_login.dart';
+import 'package:atbo5li/screens/cooker_details.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -10,7 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CookerLogin(),
+      home: CookerDetails(),
     );
   }
 }

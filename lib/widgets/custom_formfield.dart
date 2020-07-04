@@ -23,11 +23,11 @@ class CustomFormField extends StatelessWidget {
             ),
             enabledBorder: OutlineInputBorder(
               borderSide: BorderSide(
-                color: Color(0xFFF38256),
+                color: Color(0xffF48356),
               ),
             ),
             focusedBorder: OutlineInputBorder(
-              borderSide: BorderSide(color: Color(0xFFF38256), width: 2.0),
+              borderSide: BorderSide(color: Color(0xffF48356), width: 2.0),
             ),
             border: OutlineInputBorder(),
           ),

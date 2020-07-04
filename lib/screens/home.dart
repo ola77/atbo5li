@@ -1,3 +1,4 @@
+import 'package:atbo5li/widgets/custom_appbar.dart';
 import 'package:atbo5li/widgets/custom_card.dart';
 import 'package:flutter/material.dart';
 
@@ -7,27 +8,14 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  @override
   var rating = 3.0;
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: PreferredSize(
         preferredSize: Size.fromHeight(70),
-        child: AppBar(
-          backgroundColor: Colors.white,
-          leading: InkWell(onTap: () {}, child: Image.asset('images/menu.png')),
-          actions: [
-            Image.asset(
-              'images/logo.png',
-              width: 43,
-              height: 53,
-            ),
-            SizedBox(
-              width: 20,
-            ),
-          ],
-        ),
+        child: CustomAppBar(),
       ),
       body: ListView(
         children: [
