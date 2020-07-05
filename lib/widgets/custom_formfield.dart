@@ -14,6 +14,8 @@ class CustomFormField extends StatelessWidget {
         padding: EdgeInsets.all(16.0),
         child: TextFormField(
           decoration: InputDecoration(
+            fillColor: Colors.white,
+            filled: true,
             hintText: hintText,
             suffixIcon: suffixIcon,
             hintStyle: TextStyle(

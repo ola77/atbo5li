@@ -1,4 +1,6 @@
 import 'package:atbo5li/screens/cooker_login.dart';
+import 'package:atbo5li/screens/user_signup.dart';
+import 'package:atbo5li/screens/ChooseKind.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -36,7 +38,7 @@ class _FirstPageState extends State<FirstPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       side: BorderSide(color: Color(0xFFF38256))),
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, ChooseKind.id);},
                   color: Colors.white,
                   textColor: Color(0xFFF38256),
                   child: Text("زائر",
@@ -51,7 +53,7 @@ class _FirstPageState extends State<FirstPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       side: BorderSide(color: Color(0xFFF38256))),
-                  onPressed: () {},
+                  onPressed: () {Navigator.pushNamed(context, UserSign.id);},
                   color: Colors.white,
                   textColor: Color(0xFFF38256),
                   child: Text("مستخدم",
