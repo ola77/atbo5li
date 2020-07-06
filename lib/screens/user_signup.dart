@@ -1,5 +1,4 @@
 import 'dart:ui';
-
 import 'package:atbo5li/widgets/custom_formfield.dart';
 import 'package:atbo5li/widgets/gradient_button.dart';
 import 'package:flutter/material.dart';
@@ -16,7 +15,7 @@ class UserSign extends StatelessWidget {
   Widget buildContent(BuildContext context) {
     return Stack(
           children: [
-            Positioned(
+                Positioned(
                   child: Container(
                     padding: EdgeInsets.only(top: 50, left: 150),
                     width: MediaQuery.of(context).size.width,

@@ -1,6 +1,7 @@
 import 'package:atbo5li/screens/ChooseKind.dart';
 import 'package:atbo5li/screens/added_meals.dart';
 import 'package:atbo5li/screens/cooker_login.dart';
+import 'package:atbo5li/screens/meal_details.dart';
 import 'package:atbo5li/screens/user_signup.dart';
 import 'package:flutter/material.dart';
 
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
         CookerLogin.id:(context)=>CookerLogin(),
         UserSign.id:(context)=>UserSign(),
         ChooseKind.id:(context)=>ChooseKind(),
+        MealDetails.id: (context) => MealDetails(),
       },
       debugShowCheckedModeBanner: false,
       home: AddedMeals(),
