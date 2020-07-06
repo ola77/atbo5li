@@ -52,6 +52,7 @@ class MealDetails extends StatelessWidget {
                 color: Color(0xFF744836),
               ),
             ),
+            SizedBox(width: 20.0,),
             Text(
               'بيتزا مشكل جبن',
               style: TextStyle(
@@ -78,7 +79,7 @@ class MealDetails extends StatelessWidget {
                 color: Color(0xFF744836),
               ),
             ),
-            SizedBox(width: 60.0),
+            SizedBox(width: 35.0),
           ],
         ),
         SizedBox(
@@ -97,11 +98,11 @@ class MealDetails extends StatelessWidget {
                 color: Color(0xffF48356),
               ),
             ),
-            SizedBox(width: 50.0),
+            SizedBox(width: 25.0),
           ],
         ),
         Container(
-          margin: EdgeInsets.only(right: 50.0, top: 30.0),
+          margin: EdgeInsets.only(right: 25.0, top: 30.0),
           width: 110,
           height: 50,
           decoration: BoxDecoration(
