@@ -1,7 +1,7 @@
-import 'package:atbo5li/screens/FirstPage.dart';
+import 'package:atbo5li/screens/ChooseKind.dart';
+import 'package:atbo5li/screens/added_meals.dart';
 import 'package:atbo5li/screens/cooker_login.dart';
 import 'package:atbo5li/screens/user_signup.dart';
-import 'package:atbo5li/screens/ChooseKind.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         ChooseKind.id:(context)=>ChooseKind(),
       },
       debugShowCheckedModeBanner: false,
-      home: FirstPage(),
+      home: AddedMeals(),
     );
   }
 }
