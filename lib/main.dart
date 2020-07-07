@@ -1,5 +1,5 @@
 import 'package:atbo5li/screens/ChooseKind.dart';
-import 'package:atbo5li/screens/added_meals.dart';
+import 'package:atbo5li/screens/FirstPage.dart';
 import 'package:atbo5li/screens/cooker_login.dart';
 import 'package:atbo5li/screens/meal_details.dart';
 import 'package:atbo5li/screens/user_signup.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         MealDetails.id: (context) => MealDetails(),
       },
       debugShowCheckedModeBanner: false,
-      home: AddedMeals(),
+      home: FirstPage(),
     );
   }
 }
