@@ -1,3 +1,4 @@
+import 'package:atbo5li/screens/user_signup.dart';
 import 'package:flutter/material.dart';
 
 class MealDetails extends StatelessWidget {
@@ -27,11 +28,16 @@ class MealDetails extends StatelessWidget {
                 colorBlendMode: BlendMode.hardLight,
               ),
               Positioned(
-                top: 55.0,
-                left: 20.0,
-                child: Icon(
-                  Icons.arrow_back_ios,
-                  color: Color(0xFF744836),
+                top: 50.0,
+                left: 10.0,
+                child: IconButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    color: Color(0xFF744836),
+                  ),
                 ),
               ),
             ],
@@ -52,7 +58,9 @@ class MealDetails extends StatelessWidget {
                 color: Color(0xFF744836),
               ),
             ),
-            SizedBox(width: 20.0,),
+            SizedBox(
+              width: 20.0,
+            ),
             Text(
               'بيتزا مشكل جبن',
               style: TextStyle(
@@ -129,7 +137,9 @@ class MealDetails extends StatelessWidget {
             width: 150.0,
             height: 50.0,
             child: RaisedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, UserSign.id);
+              },
               color: Color(0xffF48356),
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.0),

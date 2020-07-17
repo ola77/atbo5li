@@ -17,6 +17,7 @@ class CustomCard extends StatelessWidget {
   final double imageWidth;
   final double width;
 
+
   CustomCard(
       {this.headerTitle,
       this.imageView,

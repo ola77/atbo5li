@@ -1,8 +1,12 @@
+import 'package:atbo5li/screens/added_meals.dart';
+import 'package:atbo5li/screens/cooker_details.dart';
+import 'package:atbo5li/screens/home.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChooseKind extends StatelessWidget {
   static const String id = "ChooseKind_Screen";
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,29 +38,31 @@ class ChooseKind extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: <Widget>[
-             RaisedButton(
-              elevation: 0,
-              color: Colors.transparent,
-              child: Column(
-                children: <Widget>[
-                  ClipOval(
-                    child: Image.asset(
-                      'images/natural_food.png',
-                      width: 140,
-                      height: 140,
-                      fit: BoxFit.cover,
+              RaisedButton(
+                elevation: 0,
+                color: Colors.transparent,
+                child: Column(
+                  children: <Widget>[
+                    ClipOval(
+                      child: Image.asset(
+                        'images/natural_food.png',
+                        width: 140,
+                        height: 140,
+                        fit: BoxFit.cover,
+                      ),
                     ),
-                  ),
-                  Text("عادى",style:
+                    Text("عادى", style:
                     TextStyle(fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
-                    fontFamily: 'cairo',
-                    color: Color(0xffF48356),),
-                  ),
-                ],
+                      fontWeight: FontWeight.bold,
+                      fontFamily: 'cairo',
+                      color: Color(0xffF48356),),
+                    ),
+                  ],
+                ),
+                onPressed: () {
+                  Navigator.pushNamed(context, Home.id);
+                },
               ),
-              onPressed: (){},
-            ),
               RaisedButton(
                 elevation: 0,
                 color: Colors.transparent,
@@ -80,8 +86,8 @@ class ChooseKind extends StatelessWidget {
                 ),
                 onPressed: (){},
               ),
-      ],
-    ),
+            ],
+          ),
           Padding(
             padding: EdgeInsets.only(
               left: MediaQuery.of(context).size.width*0.27,
