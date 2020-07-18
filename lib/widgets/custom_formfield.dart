@@ -1,11 +1,17 @@
 import 'package:flutter/material.dart';
 
-class CustomFormField extends StatelessWidget {
-  CustomFormField({this.hintText, this.suffixIcon});
+class CustomFormField extends StatefulWidget {
+  CustomFormField({this.hintText, this.suffixIcon, this.controller});
 
   final String hintText;
   final Icon suffixIcon;
+  final TextEditingController controller;
 
+  @override
+  _CustomFormFieldState createState() => _CustomFormFieldState();
+}
+
+class _CustomFormFieldState extends State<CustomFormField> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
@@ -13,11 +19,12 @@ class CustomFormField extends StatelessWidget {
       child: Padding(
         padding: EdgeInsets.all(16.0),
         child: TextFormField(
+          controller: widget.controller,
           decoration: InputDecoration(
             fillColor: Colors.white,
             filled: true,
-            hintText: hintText,
-            suffixIcon: suffixIcon,
+            hintText: widget.hintText,
+            suffixIcon: widget.suffixIcon,
             hintStyle: TextStyle(
               fontFamily: 'cairo',
               color: Color(0xFF744836),

@@ -1,9 +1,25 @@
+import 'package:atbo5li/screens/home.dart';
+import 'package:atbo5li/screens/user_signup.dart';
+import 'package:atbo5li/services/auth.dart';
 import 'package:atbo5li/widgets/custom_formfield.dart';
 import 'package:atbo5li/widgets/gradient_button.dart';
 import 'package:flutter/material.dart';
 
-class CookerLogin extends StatelessWidget {
+class CookerLogin extends StatefulWidget {
   static const String id = "CookerLogIn_Screen";
+
+  @override
+  _CookerLoginState createState() => _CookerLoginState();
+}
+
+class _CookerLoginState extends State<CookerLogin> {
+
+  final AuthService _auth = AuthService();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+
+  String error = '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,6 +79,7 @@ class CookerLogin extends StatelessWidget {
                   child: Column(
                     children: <Widget>[
                       CustomFormField(
+                        controller: emailController,
                         hintText: 'البريد الإلكتروني',
                         suffixIcon: Icon(
                           Icons.mail_outline,
@@ -70,6 +87,7 @@ class CookerLogin extends StatelessWidget {
                         ),
                       ),
                       CustomFormField(
+                        controller: passwordController,
                         hintText: 'كلمة المرور',
                         suffixIcon: Icon(
                           Icons.lock_outline,
@@ -98,14 +116,33 @@ class CookerLogin extends StatelessWidget {
                     ],
                   ),
                 ),
-                GradientButton(),
+                GradientButton(
+                  text: 'تسجيل الدخول',
+                  onPressed: () async {
+                    dynamic result = await _auth.signInWithEmailAndPassword(
+                        emailController.text, passwordController.text);
+                    if (result == null) {
+                      setState(() {
+                        error = 'Invalid credentials';
+                      });
+                    }
+                    else {
+                      Navigator.pushNamed(context, Home.id);
+                    }
+                  },
+                ),
                 SizedBox(height: 10),
-                Text(
-                  'تسجيل حساب جديد',
-                  style: TextStyle(
-                    fontSize: 22.0,
-                    fontFamily: 'cairo',
-                    color: Color(0xffF48356),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, UserSign.id);
+                  },
+                  child: Text(
+                    'تسجيل حساب جديد',
+                    style: TextStyle(
+                      fontSize: 22.0,
+                      fontFamily: 'cairo',
+                      color: Color(0xffF48356),
+                    ),
                   ),
                 ),
               ],

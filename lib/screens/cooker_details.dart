@@ -1,3 +1,4 @@
+import 'package:atbo5li/screens/added_meals.dart';
 import 'package:atbo5li/screens/meal_details.dart';
 import 'package:atbo5li/widgets/custom_appbar.dart';
 import 'package:atbo5li/widgets/meal_card.dart';
@@ -124,6 +125,25 @@ class CookerDetails extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: <Widget>[
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, AddedMeals.id);
+                  },
+                  child: Text(
+                    'أضف وجبة',
+                    textDirection: TextDirection.rtl,
+                    style: TextStyle(
+                      color: Color(0xffF48356),
+                      fontFamily: 'Cairo',
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+                SizedBox(width: MediaQuery
+                    .of(context)
+                    .size
+                    .width * 0.5),
                 Text(
                   'المنيو',
                   textDirection: TextDirection.rtl,

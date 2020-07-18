@@ -1,7 +1,6 @@
 import 'package:atbo5li/screens/cooker_login.dart';
 import 'package:atbo5li/screens/user_signup.dart';
 import 'package:atbo5li/screens/ChooseKind.dart';
-import 'package:atbo5li/services/auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ class FirstPage extends StatefulWidget {
 }
 
 class _FirstPageState extends State<FirstPage> {
-  final AuthService _auth = AuthService();
+
 
   @override
   Widget build(BuildContext context) {
@@ -47,16 +46,9 @@ class _FirstPageState extends State<FirstPage> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(10.0),
                       side: BorderSide(color: Color(0xFFF38256))),
-                  onPressed: () async {
-                    //signInAnon
-                    dynamic result = await _auth.signInAnon();
-                    if (result == null) {
-                      print('error signing in');
-                    } else {
-                      print('signed In');
-                      print(result);
+                  onPressed: () {
+
                       Navigator.pushNamed(context, ChooseKind.id);
-                    }
                   },
                   color: Colors.white,
                   textColor: Color(0xFFF38256),

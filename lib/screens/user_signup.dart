@@ -1,10 +1,24 @@
 import 'dart:ui';
+import 'package:atbo5li/screens/home.dart';
+import 'package:atbo5li/services/auth.dart';
 import 'package:atbo5li/widgets/custom_formfield.dart';
 import 'package:atbo5li/widgets/gradient_button.dart';
 import 'package:flutter/material.dart';
 
-class UserSign extends StatelessWidget {
+class UserSign extends StatefulWidget {
   static const String id = "userSignUP_Screen";
+
+  @override
+  _UserSignState createState() => _UserSignState();
+}
+
+class _UserSignState extends State<UserSign> {
+  final AuthService _auth = AuthService();
+  TextEditingController nameController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController passwordController = TextEditingController();
+  TextEditingController phoneController = TextEditingController();
+  String error = '';
 
   @override
   Widget build(BuildContext context) {
@@ -76,6 +90,15 @@ class UserSign extends StatelessWidget {
                         child: Column(
                           children: <Widget>[
                             CustomFormField(
+                              controller: nameController,
+                              hintText: 'الاسم',
+                              suffixIcon: Icon(
+                                Icons.person,
+                                color: Color(0xFF744836),
+                              ),
+                            ),
+                            CustomFormField(
+                              controller: emailController,
                               hintText: 'البريد الإلكتروني',
                               suffixIcon: Icon(
                                 Icons.mail_outline,
@@ -83,6 +106,7 @@ class UserSign extends StatelessWidget {
                               ),
                             ),
                             CustomFormField(
+                              controller: phoneController,
                               hintText: 'رقم الهاتف',
                               suffixIcon: Icon(
                                 Icons.phone_android,
@@ -90,33 +114,34 @@ class UserSign extends StatelessWidget {
                               ),
                             ),
                             CustomFormField(
+                              controller: passwordController,
                               hintText: 'كلمة المرور',
                               suffixIcon: Icon(
                                 Icons.lock_outline,
                                 color: Color(0xFF744836),
                               ),
                             ),
-                            CustomFormField(
-                              hintText: 'تأكيد كلمة المرور',
-                              suffixIcon: Icon(
-                                Icons.lock_outline,
-                                color: Color(0xFF744836),
-                              ),
-                            ),
-                            CustomFormField(
-                              hintText: 'المنطقه',
-                              suffixIcon: Icon(
-                                Icons.arrow_drop_down,
-                                color: Color(0xFF744836),
-                              ),
-                            ),
-                            CustomFormField(
-                              hintText: 'نوع الأكل',
-                              suffixIcon: Icon(
-                                Icons.arrow_drop_down,
-                                color: Color(0xFF744836),
-                              ),
-                            ),
+//                            CustomFormField(
+//                              hintText: 'تأكيد كلمة المرور',
+//                              suffixIcon: Icon(
+//                                Icons.lock_outline,
+//                                color: Color(0xFF744836),
+//                              ),
+//                            ),
+//                            CustomFormField(
+//                              hintText: 'المنطقه',
+//                              suffixIcon: Icon(
+//                                Icons.arrow_drop_down,
+//                                color: Color(0xFF744836),
+//                              ),
+//                            ),
+//                            CustomFormField(
+//                              hintText: 'نوع الأكل',
+//                              suffixIcon: Icon(
+//                                Icons.arrow_drop_down,
+//                                color: Color(0xFF744836),
+//                              ),
+//                            ),
                             SizedBox(
                               height: 20,
                             ),
@@ -124,7 +149,17 @@ class UserSign extends StatelessWidget {
                         ),
                       ),
                       Padding(
-                          padding: EdgeInsets.all(8), child: GradientButton()),
+                          padding: EdgeInsets.all(8), child: GradientButton(
+                        text: 'تسجيل حساب',
+                        onPressed: () async {
+                          var result = await _auth.registerWithEmailAndPassword(
+                              emailController.text, passwordController.text);
+                          print(result);
+                          if (result != null) {
+                            Navigator.pushNamed(context, Home.id);
+                          }
+                        },
+                      )),
                     ],
                   ),
                 ),
