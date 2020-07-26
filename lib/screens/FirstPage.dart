@@ -1,10 +1,12 @@
-import 'package:atbo5li/screens/cooker_login.dart';
-import 'package:atbo5li/screens/user_signup.dart';
-import 'package:atbo5li/screens/ChooseKind.dart';
+import 'file:///C:/Work/Apps/atbo5li/lib/screens/cooker/cooker_login.dart';
+import 'file:///C:/Work/Apps/atbo5li/lib/screens/user/user_signup.dart';
+import 'file:///C:/Work/Apps/atbo5li/lib/screens/user/ChooseKind.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class FirstPage extends StatefulWidget {
+  static const String id = "FirstPage_Screen";
+
   @override
   _FirstPageState createState() => _FirstPageState();
 }

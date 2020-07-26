@@ -1,6 +1,4 @@
-import 'package:atbo5li/screens/added_meals.dart';
-import 'package:atbo5li/screens/cooker_details.dart';
-import 'package:atbo5li/screens/home.dart';
+import 'package:atbo5li/screens/user/home(userMode).dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -60,7 +58,7 @@ class ChooseKind extends StatelessWidget {
                   ],
                 ),
                 onPressed: () {
-                  Navigator.pushNamed(context, Home.id);
+                  Navigator.pushNamed(context, HomeUser.id);
                 },
               ),
               RaisedButton(

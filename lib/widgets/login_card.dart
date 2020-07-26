@@ -1,3 +1,4 @@
+import 'package:atbo5li/screens/user/user_signup.dart';
 import 'package:flutter/material.dart';
 import 'custom_formfield.dart';
 import 'gradient_button.dart';
@@ -64,14 +65,19 @@ class LoginCard extends StatelessWidget {
                 ],
               ),
             ),
-            GradientButton(),
+            GradientButton(text: 'تسجيل الدخول', onPressed: () {}),
             SizedBox(height: 10),
-            Text(
-              'تسجيل حساب جديد',
-              style: TextStyle(
-                fontSize: 22.0,
-                fontFamily: 'cairo',
-                color: Color(0xffF48356),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, UserSign.id);
+              },
+              child: Text(
+                'تسجيل حساب جديد',
+                style: TextStyle(
+                  fontSize: 22.0,
+                  fontFamily: 'cairo',
+                  color: Color(0xffF48356),
+                ),
               ),
             ),
           ],

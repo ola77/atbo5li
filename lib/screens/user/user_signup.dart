@@ -1,5 +1,5 @@
 import 'dart:ui';
-import 'package:atbo5li/screens/home.dart';
+import 'package:atbo5li/screens/user/home(userMode).dart';
 import 'package:atbo5li/services/auth.dart';
 import 'package:atbo5li/widgets/custom_formfield.dart';
 import 'package:atbo5li/widgets/gradient_button.dart';
@@ -156,7 +156,7 @@ class _UserSignState extends State<UserSign> {
                               emailController.text, passwordController.text);
                           print(result);
                           if (result != null) {
-                            Navigator.pushNamed(context, Home.id);
+                            Navigator.pushNamed(context, HomeUser.id);
                           }
                         },
                       )),

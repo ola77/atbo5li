@@ -1,16 +1,17 @@
-import 'package:atbo5li/screens/cooker_details.dart';
+import 'package:atbo5li/screens/cooker/cooker_details(cookerMode).dart';
 import 'package:atbo5li/widgets/custom_appbar.dart';
 import 'package:atbo5li/widgets/custom_card.dart';
+import 'package:atbo5li/widgets/custom_drawer.dart';
 import 'package:flutter/material.dart';
 
-class Home extends StatefulWidget {
-  static const String id = "Home_Screen";
+class HomeCooker extends StatefulWidget {
+  static const String id = "HomeCooker_Screen";
 
   @override
-  _HomeState createState() => _HomeState();
+  _HomeCookerState createState() => _HomeCookerState();
 }
 
-class _HomeState extends State<Home> {
+class _HomeCookerState extends State<HomeCooker> {
   var rating = 3.0;
 
   @override
@@ -20,6 +21,7 @@ class _HomeState extends State<Home> {
         preferredSize: Size.fromHeight(70),
         child: CustomAppBar(),
       ),
+      drawer: CustomDrawer(),
       body: ListView(
         children: [
           Column(
@@ -27,7 +29,7 @@ class _HomeState extends State<Home> {
               Center(
                 child: InkWell(
                   onTap: () {
-                    Navigator.pushNamed(context, CookerDetails.id);
+                    Navigator.pushNamed(context, CookerDetailsC.id);
                   },
                   child: CustomCard(
                     headerTitle: 'الشيف الشربينى',
@@ -49,7 +51,7 @@ class _HomeState extends State<Home> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, CookerDetails.id);
+                  Navigator.pushNamed(context, CookerDetailsC.id);
                 },
                 child: CustomCard(
                   headerTitle: 'الشيف الشربينى',
@@ -70,7 +72,7 @@ class _HomeState extends State<Home> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, CookerDetails.id);
+                  Navigator.pushNamed(context, CookerDetailsC.id);
                 },
                 child: CustomCard(
                   headerTitle: 'الشيف الشربينى',
@@ -91,7 +93,7 @@ class _HomeState extends State<Home> {
               ),
               InkWell(
                 onTap: () {
-                  Navigator.pushNamed(context, CookerDetails.id);
+                  Navigator.pushNamed(context, CookerDetailsC.id);
                 },
                 child: CustomCard(
                   headerTitle: 'الشيف الشربينى',

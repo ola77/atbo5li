@@ -1,13 +1,13 @@
-import 'package:atbo5li/screens/added_meals.dart';
-import 'package:atbo5li/screens/meal_details.dart';
+import 'package:atbo5li/screens/cooker/added_meals.dart';
 import 'package:atbo5li/widgets/custom_appbar.dart';
+import 'package:atbo5li/widgets/custom_drawer.dart';
 import 'package:atbo5li/widgets/meal_card.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_star_rating/smooth_star_rating.dart';
 
-class CookerDetails extends StatelessWidget {
-  static const String id = "CookerDetails_Screen";
+class CookerDetailsC extends StatelessWidget {
+  static const String id = "CookerDetailsC_Screen";
   final rating = 3.0;
   final List<String> pizzaType = [
     'بيتزا مشكل جبن',
@@ -17,7 +17,6 @@ class CookerDetails extends StatelessWidget {
     'بيتزا مارجريتا'
   ];
 
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,6 +24,7 @@ class CookerDetails extends StatelessWidget {
         preferredSize: Size.fromHeight(70),
         child: CustomAppBar(),
       ),
+      drawer: CustomDrawer(),
       body: buildContent(context),
     );
   }
@@ -157,107 +157,67 @@ class CookerDetails extends StatelessWidget {
                 SizedBox(width: 30.0),
               ],
             ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, MealDetails.id);
-              },
-              child: MealCard(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.16,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * .95,
-                color: Colors.white,
-                mealName: '${pizzaType[0]}',
-                mealImage: 'images/pizza.jpg',
-                mealWeight: '900g',
-                price: '190 EGP',
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, MealDetails.id);
-              },
-              child: MealCard(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.16,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * .95,
-                color: Colors.white,
-                mealName: '${pizzaType[1]}',
-                mealImage: 'images/pizza.jpg',
-                mealWeight: '950g',
-                price: '200 EGP',
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, MealDetails.id);
-              },
-              child: MealCard(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.16,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * .95,
-                color: Colors.white,
-                mealName: 'بيتزا سجق',
-                mealImage: 'images/pizza.jpg',
-                mealWeight: '700g',
-                price: '150 EGP',
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, MealDetails.id);
-              },
-              child: MealCard(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.16,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * .95,
-                color: Colors.white,
-                mealName: 'بيتزا بسطرمة',
-                mealImage: 'images/pizza.jpg',
-                mealWeight: '800g',
-                price: '170 EGP',
-              ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pushNamed(context, MealDetails.id);
-              },
-              child: MealCard(
-                height: MediaQuery
-                    .of(context)
-                    .size
-                    .height * 0.16,
-                width: MediaQuery
-                    .of(context)
-                    .size
-                    .width * .95,
-                color: Colors.white,
-                mealName: 'بيتزا مارجريتا',
-                mealImage: 'images/pizza.jpg',
-                mealWeight: '900g',
-                price: '180 EGP',
-              ),
-            ),
           ],
+        ),
+        MealCard(
+          height: MediaQuery
+              .of(context)
+              .size
+              .height * 0.16,
+          width: MediaQuery
+              .of(context)
+              .size
+              .width * .95,
+          color: Colors.white,
+          mealName: '${pizzaType[1]}',
+          mealImage: 'images/pizza.jpg',
+          mealWeight: '950g',
+          price: '200 EGP',
+        ),
+        MealCard(
+          height: MediaQuery
+              .of(context)
+              .size
+              .height * 0.16,
+          width: MediaQuery
+              .of(context)
+              .size
+              .width * .95,
+          color: Colors.white,
+          mealName: 'بيتزا سجق',
+          mealImage: 'images/pizza.jpg',
+          mealWeight: '700g',
+          price: '150 EGP',
+        ),
+        MealCard(
+          height: MediaQuery
+              .of(context)
+              .size
+              .height * 0.16,
+          width: MediaQuery
+              .of(context)
+              .size
+              .width * .95,
+          color: Colors.white,
+          mealName: 'بيتزا بسطرمة',
+          mealImage: 'images/pizza.jpg',
+          mealWeight: '800g',
+          price: '170 EGP',
+        ),
+        MealCard(
+          height: MediaQuery
+              .of(context)
+              .size
+              .height * 0.16,
+          width: MediaQuery
+              .of(context)
+              .size
+              .width * .95,
+          color: Colors.white,
+          mealName: 'بيتزا مارجريتا',
+          mealImage: 'images/pizza.jpg',
+          mealWeight: '900g',
+          price: '180 EGP',
         ),
       ],
     );

@@ -1,14 +1,14 @@
 import 'package:atbo5li/widgets/login_card.dart';
 import 'package:flutter/material.dart';
 
-class MealDetails extends StatefulWidget {
-  static const String id = "MealDetails_Screen";
+class MealDetailsAnon extends StatefulWidget {
+  static const String id = "MealDetailsAnon_Screen";
 
   @override
-  _MealDetailsState createState() => _MealDetailsState();
+  _MealDetailsAnonState createState() => _MealDetailsAnonState();
 }
 
-class _MealDetailsState extends State<MealDetails> {
+class _MealDetailsAnonState extends State<MealDetailsAnon> {
   bool _buttonClicked = false;
 
   @override
@@ -25,14 +25,8 @@ class _MealDetailsState extends State<MealDetails> {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: <Widget>[
             Container(
-              width: MediaQuery
-                  .of(context)
-                  .size
-                  .width,
-              height: MediaQuery
-                  .of(context)
-                  .size
-                  .height * 0.4,
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height * 0.4,
               child: Stack(
                 fit: StackFit.expand,
                 children: <Widget>[
@@ -187,7 +181,8 @@ class _MealDetailsState extends State<MealDetails> {
             ),
           ],
         ),
-        Visibility( // to show loginCard
+        Visibility(
+          // to show loginCard
           visible: _buttonClicked,
           child: LoginCard(),
         ),

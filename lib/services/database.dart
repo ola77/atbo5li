@@ -1,4 +1,5 @@
-import 'package:atbo5li/models/user.dart';
+import 'package:atbo5li/constants.dart';
+import 'package:atbo5li/models/meal.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 class DatabaseService {
@@ -12,6 +13,9 @@ class DatabaseService {
   final CollectionReference userCollection =
       Firestore.instance.collection('users');
 
+  // collection Reference for meal
+  final Firestore _meal = Firestore.instance;
+
   Future updateUserData(String name, String email, String phone) async {
     return await userCollection.document(uid).setData({
       'name': name,
@@ -20,18 +24,19 @@ class DatabaseService {
     });
   }
 
-  // userData from snapshot
-  UserData _userDataFromSnapshot(DocumentSnapshot snapshot) {
-    return UserData(
-      uid: uid,
-      name: snapshot.data['name'],
-      email: snapshot.data['email'],
-      phone: snapshot.data['phone'],
-    );
+
+  //add food in database
+  addFood(Meal meal) {
+    _meal.collection(kMealsCollection).add({
+      kMealsName: meal.mealName,
+      kMealsPrice: meal.mealPrice,
+      kMealsDescription: meal.mealDescription,
+      kMealsCapacity: meal.mealCapacity,
+    });
   }
 
-  // get user doc stream
-  Stream<UserData> get userData {
-    return userCollection.document(uid).snapshots().map(_userDataFromSnapshot);
+  Stream<QuerySnapshot> loadMeals() {
+    return _meal.collection(kMealsCollection).snapshots();
   }
+
 }

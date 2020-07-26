@@ -3,8 +3,9 @@ import 'package:flutter/material.dart';
 class StandardFormField extends StatelessWidget {
   final String hintText;
   final EdgeInsetsGeometry padding;
+  final Function onClick;
 
-  StandardFormField({this.hintText, this.padding});
+  StandardFormField({this.hintText, this.padding, this.onClick});
 
   @override
   Widget build(BuildContext context) {
@@ -17,14 +18,15 @@ class StandardFormField extends StatelessWidget {
           child: Padding(
             padding: EdgeInsets.only(left: 20, top: 50, right: 20),
             child: TextFormField(
+              onSaved: onClick,
               textDirection: TextDirection.rtl,
               decoration: InputDecoration(
                   enabledBorder: UnderlineInputBorder(
                       borderSide:
-                          BorderSide(width: 3, color: Color(0xffF48356))),
+                      BorderSide(width: 3, color: Color(0xffF48356))),
                   focusedBorder: UnderlineInputBorder(
                       borderSide:
-                          BorderSide(width: 3, color: Color(0xffF48356))),
+                      BorderSide(width: 3, color: Color(0xffF48356))),
                   hintText: hintText,
                   hintStyle: TextStyle(
                       fontSize: 22.0,

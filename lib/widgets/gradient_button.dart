@@ -1,25 +1,15 @@
-import 'package:atbo5li/screens/home.dart';
-import 'package:atbo5li/services/auth.dart';
 import 'package:flutter/material.dart';
 
-class GradientButton extends StatefulWidget {
-  final VoidCallback onPressed;
+class GradientButton extends StatelessWidget {
+
+  final String email = '';
+  final String password = '';
+  final String error = '';
   final String text;
-
-  const GradientButton({Key key, this.onPressed, this.text}) : super(key: key);
-
-  @override
-  _GradientButtonState createState() => _GradientButtonState(onPressed, text);
-}
-
-class _GradientButtonState extends State<GradientButton> {
   final VoidCallback onPressed;
-  final String text;
-  String email = '';
-  String password = '';
-  String error = '';
 
-  _GradientButtonState(this.onPressed, this.text);
+  GradientButton({this.text, this.onPressed});
+
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +20,7 @@ class _GradientButtonState extends State<GradientButton> {
           .size
           .width * 0.92,
       child: RaisedButton(
+        onPressed: onPressed,
         padding: EdgeInsets.all(0.0),
         child: Container(
           padding: EdgeInsets.all(10.0),
@@ -58,7 +49,7 @@ class _GradientButtonState extends State<GradientButton> {
         ),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
-        ), onPressed: onPressed,
+        ),
       ),
     );
   }

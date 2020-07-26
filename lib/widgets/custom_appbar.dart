@@ -5,7 +5,8 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.white,
-      leading: InkWell(onTap: () {}, child: Image.asset('images/menu.png')),
+      leading: InkWell(onTap: () => Scaffold.of(context).openDrawer(),
+          child: Image.asset('images/menu.png')),
       actions: [
         Image.asset(
           'images/logo.png',

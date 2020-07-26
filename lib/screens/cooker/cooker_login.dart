@@ -1,5 +1,5 @@
-import 'package:atbo5li/screens/home.dart';
-import 'package:atbo5li/screens/user_signup.dart';
+import 'package:atbo5li/screens/cooker/home(cookerMode).dart';
+import 'package:atbo5li/screens/user/user_signup.dart';
 import 'package:atbo5li/services/auth.dart';
 import 'package:atbo5li/widgets/custom_formfield.dart';
 import 'package:atbo5li/widgets/gradient_button.dart';
@@ -127,7 +127,7 @@ class _CookerLoginState extends State<CookerLogin> {
                       });
                     }
                     else {
-                      Navigator.pushNamed(context, Home.id);
+                      Navigator.pushNamed(context, HomeCooker.id);
                     }
                   },
                 ),
