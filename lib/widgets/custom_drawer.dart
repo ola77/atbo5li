@@ -1,5 +1,5 @@
+import 'package:atbo5li/screens/cooker/cooker_details(cookerMode).dart';
 import 'package:atbo5li/screens/cooker/cooker_login.dart';
-import 'package:atbo5li/screens/cooker/home(cookerMode).dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -42,7 +42,7 @@ class CustomDrawer extends StatelessWidget {
             padding: EdgeInsets.only(left: 3.0),
             child: ListTile(
               onTap: () {
-                Navigator.pushNamed(context, HomeCooker.id);
+                Navigator.pushNamed(context, CookerDetailsC.id);
               },
               title: Row(
                 children: <Widget>[
