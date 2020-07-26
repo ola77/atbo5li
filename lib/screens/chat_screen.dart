@@ -126,8 +126,16 @@ class ChatScreen extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           CircleAvatar(
-                            backgroundImage:
-                                AssetImage('images/cheif_hassan.jpg'),
+                            backgroundColor: Colors.grey,
+                            child: Text(
+                              'م',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'cairo',
+                                color: Colors.white,
+                              ),
+                            ),
                             radius: 25,
                           ),
                         ],
@@ -269,8 +277,16 @@ class ChatScreen extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           CircleAvatar(
-                            backgroundImage:
-                                AssetImage('images/cheif_hassan.jpg'),
+                            backgroundColor: Colors.grey,
+                            child: Text(
+                              'م',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'cairo',
+                                color: Colors.white,
+                              ),
+                            ),
                             radius: 25,
                           ),
                         ],
@@ -420,8 +436,16 @@ class ChatScreen extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           CircleAvatar(
-                            backgroundImage:
-                                AssetImage('images/cheif_hassan.jpg'),
+                            backgroundColor: Colors.grey,
+                            child: Text(
+                              'م',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'cairo',
+                                color: Colors.white,
+                              ),
+                            ),
                             radius: 25,
                           ),
                         ],
@@ -567,8 +591,16 @@ class ChatScreen extends StatelessWidget {
                           ),
                           SizedBox(width: 5),
                           CircleAvatar(
-                            backgroundImage:
-                                AssetImage('images/cheif_hassan.jpg'),
+                            backgroundColor: Colors.grey,
+                            child: Text(
+                              'م',
+                              style: TextStyle(
+                                fontSize: 18.0,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'cairo',
+                                color: Colors.white,
+                              ),
+                            ),
                             radius: 25,
                           ),
                         ],
